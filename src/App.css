@@ -3,3 +3,40 @@ header {
   display: flex;
 }
 
+.cards-header{
+  height: 150px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.down-cards {
+  background: green;
+  height: 100px;
+  width: 100%;
+}
+
+.active-card {
+  background: red;
+  height: 100px;
+  width: 100%;
+}
+
+.used-cards {
+  background: blue;
+  height: 100px;
+  width: 100%;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+}
+
+.board{
+  margin: 12px auto;
+  background: #313131;
+  height: 450px;
+  width: 50%;
+}

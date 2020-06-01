@@ -2,7 +2,9 @@ import React from 'react';
 
 const LoteriaBoard = () => {
     return(
-        <h1>LoteriaBoard</h1>
+        <div className="board-container">
+            <div className="board"></div>
+        </div>
     )
 }
 

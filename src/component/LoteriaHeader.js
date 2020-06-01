@@ -2,7 +2,11 @@ import React from 'react';
 
 const LoteriaHeader = () => {
     return(
-        <h1>Loteria Header</h1>
+        <div className="cards-header">
+            <div className="down-cards"></div>
+            <div className="active-card"></div>
+            <div className="used-cards"></div>
+        </div>
     )
 }
 
