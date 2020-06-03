@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import LoteriaHeader from './LoteriaHeader';
 import LoteriaBoard from './LoteriaBoard';
-import Images from '../images';
+
+import {GlobalContext} from '../context/GlobalState'
 
 const Home = () => {
-    const [useCards, setCards] = useState(Images);
-    console.log(useCards)
+    const {cards} = useContext(GlobalContext);
+    console.log(cards)
     return(
         <main>
-            <LoteriaHeader />
+            <LoteriaHeader/>
             <LoteriaBoard />
         </main>
     )
