@@ -1,6 +1,7 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {GlobalContext} from '../context/GlobalState'
 const LoteriaBoard = () => {
+    const [boardCards,setBoardCards] = useState({})
     const {cards} = useContext(GlobalContext);
     const randomizeBoard = () => {
         let randomCard = []
@@ -8,26 +9,26 @@ const LoteriaBoard = () => {
             let randomId = Math.floor(Math.random() * 54)
             randomCard.push(randomId)
         }
-        console.log(randomCard)
-        console.log(cards[0].id)
         let boardCards = []
         for(let j = 0; j < cards.length; j ++){
-            console.log(cards[j].id)
             for(let g =0; g <= randomCard.length; g++){
                 if(cards[j].id == randomCard[g]){
                     boardCards.push(cards[j])
                 }
             } 
         }
-        console.log(boardCards)
+        setBoardCards(boardCards)
     }
 
     useEffect(() => {
         randomizeBoard();
-    })
+    }, [])
     return(
         <div className="board-container">
             <div className="board">
+                {
+                    console.log(boardCards)
+                }
             </div>
         </div>
     )
